@@ -48,7 +48,68 @@
             <a href="https://github.com/DevenPanchal/simpliflow-usage" target="_blank" class="bg-purple-600 text-white px-8 py-3 rounded-md text-lg font-semibold hover:bg-purple-700 transition duration-300 animate-pulse">Try simpliflow Now</a>
         </section>
 
-        <section id="features" class="py-16">
+        <section class="container mx-auto px-6 py-16">
+            <div class="bg-gradient-to-r from-purple-900 to-pink-900 rounded-lg shadow-xl overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 p-8">
+                        <h2 class="text-3xl font-bold text-white mb-4">See simpliFlow in Action</h2>
+                        <p class="text-purple-200 text-lg mb-6">Watch how easily you can create and manage complex AI workflows with simpliFlow.</p>
+                        <a href="#" class="bg-white text-purple-800 px-6 py-3 rounded-md font-semibold hover:bg-purple-100 transition duration-300">Watch Demo</a>
+                    </div>
+                    <div class="md:w-1/2 p-8">
+                        <div class="bg-gray-800 rounded-lg p-4 shadow-inner">
+                            <pre id="codeDemo" class="text-sm text-purple-300 overflow-x-auto">
+{
+    "flow_description": "Analyze 5G performance data",
+    "agents": [
+        {
+            "head": "True",
+            "name_of_agent": "DataSimulator",
+            "role_of_agent": "Data Simulator",
+            "what_should_agent_do": "Simulate RAN Performance data for 5G",
+            "postprocessor_function": "None",
+            "next": "DataVisualizer"
+        },
+        {
+            "head": "False",
+            "name_of_agent": "DataVisualizer",
+            "role_of_agent": "Data Visualizer",
+            "what_should_agent_do": "Visualize this data",
+            "postprocessor_function": "None",
+            "next": "None"
+        }
+    ]
+}
+                            </pre>
+                        </div>
+                    </div>
+
+                
+                    <div class="md:w-1/2 p-8">
+                        <div class="bg-gray-800 rounded-lg p-4 shadow-inner">
+                            <pre id="codeDemo" class="text-sm text-purple-300 overflow-x-auto">
+# STEP 1: REQUIRED PARAMETERS
+vendor = "OpenAI"
+modelname = "gpt-4o"
+
+# STEP 2: OPTIONAL PARAMETERS
+creativity = 0.7
+diversity = 0.85
+maxtokens = 1000
+
+# STEP 3: RUN THE FLOW!
+a, b = sim.call_agents(agentsfile, dynamic_input, 
+    vendor, modelname, creativity, diversity, maxtokens)
+                            </pre>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+         <section id="features" class="py-16">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center mb-12 text-white">Why Choose simpliFlow?</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -138,68 +199,6 @@
                 </div>
             </div>
         </section>
-
-        <section class="container mx-auto px-6 py-16">
-            <div class="bg-gradient-to-r from-purple-900 to-pink-900 rounded-lg shadow-xl overflow-hidden">
-                <div class="md:flex">
-                    <div class="md:w-1/2 p-8">
-                        <h2 class="text-3xl font-bold text-white mb-4">See simpliFlow in Action</h2>
-                        <p class="text-purple-200 text-lg mb-6">Watch how easily you can create and manage complex AI workflows with simpliFlow.</p>
-                        <a href="#" class="bg-white text-purple-800 px-6 py-3 rounded-md font-semibold hover:bg-purple-100 transition duration-300">Watch Demo</a>
-                    </div>
-                    <div class="md:w-1/2 p-8">
-                        <div class="bg-gray-800 rounded-lg p-4 shadow-inner">
-                            <pre id="codeDemo" class="text-sm text-purple-300 overflow-x-auto">
-{
-    "flow_description": "Analyze 5G performance data",
-    "agents": [
-        {
-            "head": "True",
-            "name_of_agent": "DataSimulator",
-            "role_of_agent": "Data Simulator",
-            "what_should_agent_do": "Simulate RAN Performance data for 5G",
-            "postprocessor_function": "None",
-            "next": "DataVisualizer"
-        },
-        {
-            "head": "False",
-            "name_of_agent": "DataVisualizer",
-            "role_of_agent": "Data Visualizer",
-            "what_should_agent_do": "Visualize this data",
-            "postprocessor_function": "None",
-            "next": "None"
-        }
-    ]
-}
-                            </pre>
-                        </div>
-                    </div>
-
-                
-                    <div class="md:w-1/2 p-8">
-                        <div class="bg-gray-800 rounded-lg p-4 shadow-inner">
-                            <pre id="codeDemo" class="text-sm text-purple-300 overflow-x-auto">
-# STEP 1: REQUIRED PARAMETERS
-vendor = "OpenAI"
-modelname = "gpt-4o"
-
-# STEP 2: OPTIONAL PARAMETERS
-creativity = 0.7
-diversity = 0.85
-maxtokens = 1000
-
-# STEP 3: RUN THE FLOW!
-a, b = sim.call_agents(agentsfile, dynamic_input, 
-    vendor, modelname, creativity, diversity, maxtokens)
-                            </pre>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-
     
 
         <section id="get-started" class="bg-gray-800 py-16">
