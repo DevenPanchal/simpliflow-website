@@ -88,18 +88,22 @@
                     <div class="md:w-1/2 p-8">
                         <div class="bg-gray-800 rounded-lg p-4 shadow-inner">
                             <pre id="codeDemo" class="text-sm text-purple-300 overflow-x-auto">
+
 # STEP 1: REQUIRED PARAMETERS
-vendor = "OpenAI"
-modelname = "gpt-4o"
+model = "gpt-5-nano"
+                                
+# STEP 2: OPTIONAL PARAMETERS  
+creativity = temperature = 1.0
+diversity = top_p = None 
+max_tokens = 1000 
 
-# STEP 2: OPTIONAL PARAMETERS
-creativity = 0.7
-diversity = 0.85
-maxtokens = 1000
+# STEP 3: SOME MORE CONFIGURATION (agentsfile and dynamic_input)
+agentsfile = os.path.join("Workflows", "mathematician.json")  
+dynamic_input = None
 
-# STEP 3: RUN THE FLOW!
-a, b = sim.call_agents(agentsfile, dynamic_input, 
-    vendor, modelname, creativity, diversity, maxtokens)
+# STEP 4: RUN THE FLOW!
+a, b = sim.call_agents(agentsfile, dynamic_input, model, creativity, diversity, max_tokens)
+
                             </pre>
                         </div>
                     </div>
@@ -279,3 +283,4 @@ a, b = sim.call_agents(agentsfile, dynamic_input,
     </script>
 </body>
 </html>
+
