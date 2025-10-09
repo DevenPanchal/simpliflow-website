@@ -115,7 +115,7 @@
                         <ul class="text-purple-200 space-y-2">
                             <li>• Fine-tune every aspect of your AI agents</li>
                             <li>• Monitor intermediate and final results</li>
-                            <li>• Debug with detailed interaction logs</li>
+                            <li>• Supports Human Approval/ Human-in-the-loop (HITL)</li>
                             <li>• Validate and format responses your way</li>
                         </ul>
                     </div>
@@ -201,6 +201,7 @@
       "name_of_agent": "DataSimulator",
       "role_of_agent": "Data Simulator",
       "what_should_agent_do": "Simulate RAN Performance data for 5G",
+      "require_human_approval_of_response": "True",
       "postprocessor_function": "None",
       "next": "DataVisualizer"
     },
@@ -209,6 +210,7 @@
       "name_of_agent": "DataVisualizer",
       "role_of_agent": "Data Visualizer",
       "what_should_agent_do": "Visualize this data",
+      "require_human_approval_of_response": "False",
       "postprocessor_function": "None",
       "next": "None"
     }
@@ -285,3 +287,4 @@ a, b = sim.call_agents(agentsfile, dynamic_input, model,
     </script>
 </body>
 </html>
+
