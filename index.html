@@ -26,12 +26,26 @@
             transform: translateY(-10px);
             box-shadow: 0 20px 25px -5px rgba(139, 92, 246, 0.1), 0 10px 10px -5px rgba(139, 92, 246, 0.04);
         }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .logo-img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+            filter: drop-shadow(0 0 10px rgba(139, 92, 246, 0.3));
+        }
     </style>
 </head>
 <body class="bg-gray-900">
     <header class="bg-gray-800 shadow-lg">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <div class="text-2xl font-bold gradient-text">simpliflow</div>
+            <div class="logo-container">
+                <img src="https://github.com/DevenPanchal/simpliflow-website/blob/9c4387c216f79be7ef548294736506636b3efa94/assets/images/Picture1.png?ex=67611c56&is=675fcad6&hm=07f07a91e54001f4c67d10e9fa2c5e0bf23dcecb3e7f9d8e61ee14c8fb1bef83&=&format=webp&quality=lossless&width=700&height=700" alt="simpliflow logo" class="logo-img">
+                <div class="text-2xl font-bold gradient-text">simpliflow</div>
+            </div>
             <div>
                 <a href="#features" class="text-purple-300 hover:text-purple-100 px-3 py-2 transition duration-300">Features</a>
                 <a href="https://github.com/DevenPanchal/simpliflow" target="_blank" class="text-purple-300 hover:text-purple-100 px-3 py-2 transition duration-300">Documentation</a>
@@ -178,7 +192,8 @@
     <footer class="bg-gray-900 text-white py-8">
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
+                <div class="mb-4 md:mb-0 logo-container">
+                    <img src="https://media.discordapp.net/attachments/1301356994872705054/1301357009120923668/logo.png?ex=67611c56&is=675fcad6&hm=07f07a91e54001f4c67d10e9fa2c5e0bf23dcecb3e7f9d8e61ee14c8fb1bef83&=&format=webp&quality=lossless&width=700&height=700" alt="simpliflow logo" class="logo-img">
                     <span class="text-2xl font-bold gradient-text">simpliflow</span>
                 </div>
                 <div class="flex space-x-4">
@@ -287,5 +302,3 @@ a, b = sim.call_agents(agentsfile, dynamic_input, model,
     </script>
 </body>
 </html>
-
-
