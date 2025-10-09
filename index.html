@@ -209,27 +209,27 @@
     <script>
         // Code snippets content
         const code1 = `{
-  "flow_description": "Analyze 5G performance data",
-  "agents": [
-    {
-      "head": "True",
-      "name_of_agent": "DataSimulator",
-      "role_of_agent": "Data Simulator",
-      "what_should_agent_do": "Simulate RAN Performance data for 5G",
-      "require_human_approval_of_response": "True",
-      "postprocessor_function": "None",
-      "next": "DataVisualizer"
-    },
-    {
-      "head": "False",
-      "name_of_agent": "DataVisualizer",
-      "role_of_agent": "Data Visualizer",
-      "what_should_agent_do": "Visualize this data",
-      "require_human_approval_of_response": "False",
-      "postprocessor_function": "None",
-      "next": "None"
-    }
-  ]
+    "flow_description": "Simulated raw sales data for an Ecommerce website",
+    "agents": [
+        {
+            "head": "True",
+            "name_of_agent": "DataSimulator",
+            "role_of_agent": "Data Simulator",
+            "what_should_agent_do": "Write Python code snippet to generate simulated raw sales data 5G RAN. The generated data should be stored in a Pandas dataframe",
+            "require_human_approval_of_response": "True",
+            "postprocessor_function": "None",
+            "next": "DataVisualizer"
+        },
+        {
+            "head": "False",
+            "name_of_agent": "DataVisualizer",
+            "role_of_agent": "Data Visualizer",
+            "what_should_agent_do": "Write Python code snippet to visualize this data. Also generate some Donut charts",
+            "require_human_approval_of_response": "True",
+            "postprocessor_function": "None",
+            "next": "None"
+        }
+    ]
 }`;
 
         const code2 = `# STEP 1: REQUIRED PARAMETERS
@@ -241,7 +241,7 @@ diversity = top_p = None
 max_tokens = 1000 
 
 # STEP 3: CONFIGURATION
-agentsfile = os.path.join("Workflows", "mathematician.json")  
+agentsfile = os.path.join("Workflows", "Ecommerce.json")  
 dynamic_input = None
 
 # STEP 4: RUN THE FLOW!
@@ -302,3 +302,4 @@ a, b = sim.call_agents(agentsfile, dynamic_input, model,
     </script>
 </body>
 </html>
+
